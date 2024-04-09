@@ -9,6 +9,8 @@ export default {
       backgroundImage: {
         'bullImg': "url('./src/assets/wallpaper.jpeg')",
         'bullpng-img': "url('/src/assets/redbull.png')",
+        'oxbg' : "url('/src/assets/ox.png')",
+        'power' : "url('/src/assets/power.png')",
       }
     },
   },

@@ -10,9 +10,9 @@ function Navbar() {
         <div className="bg-red-600 rounded-full flex justify-center items-center w-[37px] h-[37px] text-white font-extrabold ">
         <CiUser size={17}/>
         </div>
-        <div className="border-b-2 w-48 hidden md:flex">
-          <CiSearch size={22} className="rotate-90"/>
-          <p className="text-lg">search</p>
+        <div className="border-b-2 w-48 hidden md:flex text-white items-center">
+          <CiSearch size={26} className="rotate-90"/>
+          <input type="text" placeholder="search" className="bg-transparent outline-none w-full"/>
         </div>
       </div>
 
