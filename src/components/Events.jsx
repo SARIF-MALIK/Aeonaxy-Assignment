@@ -13,10 +13,10 @@ function Events() {
     <div className="bg-[#0F0B19] text-white py-24">
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center">
-          <h1>EVENTS</h1>
-          <div className="h-[2px] w-24 bg-red-500"></div>
+          <h1 className="font-inter font-normal text-2xl mb-2">EVENTS</h1>
+          <div className="h-[2px] w-16 bg-red-500 mb-5"></div>
         </div>
-        <div className="text-center">
+        <div className="text-center font-inter font-light text-lg">
           <p>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit.
@@ -28,13 +28,14 @@ function Events() {
             title="Brooklyn Simmons"
             des="Wings without sugar: Red Bull Sugarfree is Red Bull Energy Drink
             without sugar."
+            colSpan={2}
           />
           <Card
             img={event2}
             title="Brooklyn Simmons"
             des="Wings without sugar: Red Bull Sugarfree is Red Bull Energy Drink
             without sugar."
-            colSpan={2}
+            
           />
           <Card
             img={event3}
@@ -60,6 +61,7 @@ function Events() {
             des="Wings without sugar: Red Bull Sugarfree is Red Bull Energy Drink
             without sugar."
             colSpan={2}
+            
           />
           <Card
             img={event1}
@@ -93,9 +95,9 @@ function Events() {
 
             </div>
             <div className="h-[80%] bg-gradient-to-t from-[#0c0914] to-[#0c0914] flex justify-center items-center">
-                <div>
+                <div className="flex items-center flex-col">
                 <h1>More</h1>
-                    <img src={More} alt="" className=""/>
+                    <img src={More} alt=""/>
                 </div>
             </div>
           </div>
@@ -108,18 +110,18 @@ function Events() {
 function Card({ img, title, des, colSpan }) {
   return (
     <div
-      className={`card h-[310px] relative bg-white text-black rounded-lg ${
-        colSpan ? `col-span-${colSpan}` : "col-span-1"
-      }`}
+      className={`card h-[310px] relative bg-white text-black rounded-lg 
+      ${colSpan ? `lg:col-span-${colSpan}` : "col-span-1"}`
+        }
     >
       <div className="h-[310px] overflow-hidden rounded-lg">
         <img src={img} alt="athlete" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute left-3 bottom-3 text-white w-[50%]">
-        <div className="flex flex-col items-center">
-          <h1>{title}</h1>
+      <div className="absolute left-3 bottom-3 text-white w-[50%] text-start">
+        <div>
+          <h1 className="font-inter font-medium text-2xl py-3">{title}</h1>
         </div>
-        <p>{des}</p>
+        <p className="font-inter font-normal text-lg">{des}</p>
       </div>
       <button className="bg-red-600 text-white rounded-lg w-16 md:w-20 lg:w-22 h-8 md:h-10 lg:h-12 mt-5 absolute bottom-10 right-3">
         GO <FaArrowRight className="inline" />

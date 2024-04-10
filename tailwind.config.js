@@ -14,6 +14,9 @@ export default {
         'energy' : "url('/src/assets/energy.png')",
       }
     },
+    fontFamily:{
+        inter: ["Inter", "sans-serif"]
+    }
   },
   plugins: [],
 }

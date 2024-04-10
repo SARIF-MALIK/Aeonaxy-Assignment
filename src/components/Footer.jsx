@@ -4,6 +4,7 @@ import fb from '../assets/fb.png'
 import insta from '../assets/insta.png'
 import twitter from '../assets/twitter.png'
 
+
 function Footer() {
   return (
     <div className='flex justify-around relative py-5'>
@@ -18,7 +19,7 @@ function Footer() {
             <img src={bullPng} alt="" className='w-full'/>
         </div>
         <div>
-        <ul className="hidden md:flex justify-between gap-5">
+        <ul className="hidden md:flex justify-between gap-5 font-inter font-normal text-lg">
           <li>HOME</li>
           <li>ABOUT US</li>
           <li>EVENTS</li>

@@ -18,7 +18,7 @@ function Navbar() {
 
       <div>
       <IoMenu size={36} className="md:hidden"/>
-        <ul className="hidden md:flex justify-between gap-5">
+        <ul className="hidden md:flex justify-between gap-5 font-Inter font-normal">
           <li>HOME</li>
           <li>ABOUT US</li>
           <li>EVENTS</li>

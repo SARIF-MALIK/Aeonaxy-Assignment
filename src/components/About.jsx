@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import "./about.css";
 import rec13 from "../assets/Rectangle 13.jpg";
 import { TiTick } from "react-icons/ti";
 import whiteCan from "../assets/whiteCan.png";
@@ -11,6 +12,10 @@ import playBtn from "../assets/playBtn.png";
 import rec31 from "../assets/Rectangle 31.jpg";
 
 function About() {
+  const [expanded, setExpanded] = useState(false);
+  const toggleExpanded = () => {
+    setExpanded(!expanded);
+  };
   return (
     <div>
       <div className="bg-[#0F0B19] w-full text-white flex justify-center items-center pt-14 pb-36">
@@ -18,31 +23,54 @@ function About() {
           <div className="flex w-[100%] md:w-[95%] lg:w-[88%] m-auto max-w-10/12 h-[365px]">
             <div className="flex-1 p-10">
               <div className="border-l-2 px-3">
-                <h1>ABOUT RED BULL</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                  possimus distinctio ipsa! Cumque, explicabo sint? Quas
-                  necessitatibus excepturi possimus tempore. Possimus sed
-                  voluptatem ut quia dolorum beatae sint maiores commodi.
-                  Doloremque maxime dolor hic. Deserunt, nisi. Voluptate
-                  impedit, fugiat nihil recusandae porro possimus sit illo eaque
-                  labore consequuntur dolor consectetur atque minus nostrum
-                </p>
+                <h1 className="font-inter font-medium text-6xl pb-5 ">
+                  ABOUT <span className="text-red-500">RED</span> BULL
+                </h1>
+                <div>
+                  <div
+                    className={`line-clamp-3 overflow-hidden ${
+                      expanded ? "line-clamp-none" : ""
+                    }`}
+                  >
+                    <p className="">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Esse possimus distinctio ipsa! Cumque, explicabo sint?
+                      Quas necessitatibus excepturi possimus tempore. Possimus
+                      sed voluptatem ut quia dolorum beatae sint maiores
+                      commodi. Doloremque maxime dolor hic. Deserunt, nisi.
+                      Voluptate impedit, fugiat nihil recusandae porro possimus
+                      sit illo eaque labore consequuntur dolor consectetur atque
+                      minus nostrum Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Hic qui iusto quibusdam aliquid ad quis,
+                      ipsa officia recusandae! Esse perferendis aliquam
+                      inventore accusantium architecto reprehenderit molestias
+                      excepturi repudiandae ducimus quasi!
+                    </p>
+                  </div>
+                  {!expanded && (
+                    <button
+                      onClick={toggleExpanded}
+                      className="text-red-500 hover:underline"
+                    >
+                      more...
+                    </button>
+                  )}
+                </div>
                 <ul>
                   <li>
-                    <TiTick className="inline rounded" />
+                    <TiTick className="inline rounded-full bg-green-300 text-white mr-2" />
                     veniam consequat
                   </li>
                   <li>
-                    <TiTick className="inline" />
+                    <TiTick className="inline rounded-full bg-green-300 text-white mr-2" />
                     deserut ullamco est sit
                   </li>
                   <li>
-                    <TiTick className="inline" />
+                    <TiTick className="inline rounded-full bg-green-300 text-white mr-2" />
                     velit officia
                   </li>
                   <li>
-                    <TiTick className="inline" />
+                    <TiTick className="inline rounded-full bg-green-300 text-white mr-2" />
                     est sit aliqua dolor
                   </li>
                 </ul>
@@ -64,49 +92,11 @@ function About() {
             </div>
           </div>
 
-          <div className="can-cards flex w-[80%] m-auto justify-between mt-96 relative">
-            <div className="max-w-[352px] max-h-[505px] bg-slate-500 relative flex flex-col justify-center items-center rounded-lg ">
-              <img src={whiteCan} alt="" className="absolute -top-44" />
-              <img src={whiteCanBG} alt="" />
-              <div className="my-10 flex justify-center flex-col items-center text-center">
-                <h1>RED BULL WHITE EDITION</h1>
-                <p>
-                  Wings without sugar: Red Bull Sugarfree is Red Bull Energy
-                  Drink without sugar.
-                </p>
-                <button className="bg-red-600 text-white rounded-lg w-24 md:w-30 lg:w-40 h-8 md:h-10 lg:h-12 mt-5">
-                  START
-                </button>
-              </div>
-            </div>
-            <div className="max-w-[352px] max-h-[505px] bg-slate-500 flex-col justify-center items-center absolute -top-28 left-[35%] rounded-lg hidden lg:flex">
-              <img src={redCan} alt="" className="absolute -top-44 " />
-              <img src={redCanBG} alt="" className="h-[215px]" />
-              <div className="my-10 flex justify-center flex-col items-center text-center">
-                <h1>RED BULL WHITE EDITION</h1>
-                <p>
-                  Wings without sugar: Red Bull Sugarfree is Red Bull Energy
-                  Drink without sugar.
-                </p>
-                <button className="bg-red-600 text-white rounded-lg w-24 md:w-30 lg:w-40 h-8 md:h-10 lg:h-12 mt-5">
-                  START
-                </button>
-              </div>
-            </div>
-            <div className="max-w-[352px] max-h-[555px] bg-slate-500 relative flex-col justify-center items-center rounded-lg hidden md:flex">
-              <img src={blueCan} alt="" className="absolute -top-44" />
-              <img src={blueCanBG} alt="" />
-              <div className="my-10 flex justify-center flex-col items-center text-center">
-                <h1>RED BULL WHITE EDITION</h1>
-                <p>
-                  Wings without sugar: Red Bull Sugarfree is Red Bull Energy
-                  Drink without sugar.
-                </p>
-                <button className="bg-red-600 text-white rounded-lg w-24 md:w-30 lg:w-40 h-8 md:h-10 lg:h-12 mt-5">
-                  START
-                </button>
-              </div>
-            </div>
+          <div className="can-cards flex w-[95%] md:w-[85%] flex-wrap md:flex-nowrap lg:w-[85%] m-auto justify-center md:justify-between mt-96 relative">
+            <Card canImg={whiteCan} canBG={whiteCanBG} title={"RED BULL WHITE EDITION"} btnClr={"#3B63AC"} other={"mb-44 md:my-0"}/>
+            <Card canImg={redCan} canBG={redCanBG} title={"RED BULL ENERGY DRINK"} btnClr={"#DF424C"} other={"absolute -top-28 hidden lg:flex"}/>
+            <Card canImg={blueCan} canBG={blueCanBG} title={"RED BULL SUGAR FREE"} btnClr={'#0085C7'}/>
+
           </div>
         </div>
       </div>
@@ -125,6 +115,25 @@ function About() {
       </div>
     </div>
   );
+}
+
+function Card({canImg, canBG, title, btnClr, other }){
+  return(
+    <div className= {`max-w-[352px] max-h-[505px] bg-white relative flex flex-col justify-center items-center rounded-lg ${other}`}>
+    <img src={canImg} alt="" className="absolute -top-44" />
+    <img src={canBG} alt="" />
+    <div className="my-10 flex justify-center flex-col items-center text-center text-[#414549]">
+      <h1 className="font-inter font-bold text-2xl ">{title}</h1>
+      <p>
+        Wings without sugar: Red Bull Sugarfree is Red Bull Energy
+        Drink without sugar.
+      </p>
+      <button style={{ backgroundColor: btnClr }} className= {`bg-red-500 text-white rounded-lg w-24 md:w-30 lg:w-40 h-8 md:h-10 lg:h-12 mt-5`}>
+        LEARN MORE
+      </button>
+    </div>
+  </div>
+  )
 }
 
 export default About;

@@ -1,0 +1,15 @@
+/* Global CSS */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* Adjust the number of lines to your desired limit */
+    -webkit-line-clamp: 2;
+  }
+  
+  .text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
