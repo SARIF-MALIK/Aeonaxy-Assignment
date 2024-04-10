@@ -5,8 +5,8 @@ import athelete3 from "../assets/athlete3.jpg";
 
 function Athletes() {
   return (
-    <div className="bg-[#0F0B19] text-white py-24">
-      <div className="flex flex-col justify-center items-center">
+    <div className="bg-[#0F0B19] text-white py-24 ">
+      <div className="flex flex-col justify-center items-center w-[95%] m-auto">
         <div className="flex flex-col justify-center items-center">
           <h1>ATHLETES</h1>
           <div className="h-[2px] w-24 bg-red-500"></div>
@@ -25,19 +25,19 @@ function Athletes() {
             without sugar."
           />
           <Card
-            img={athelete1}
-            title="Brooklyn Simmons"
+            img={athelete2}
+            title="Wade Warren"
             des="Wings without sugar: Red Bull Sugarfree is Red Bull Energy Drink
             without sugar."
           />
           <Card
-            img={athelete1}
-            title="Brooklyn Simmons"
+            img={athelete3}
+            title="Cameron Williamson"
             des="Wings without sugar: Red Bull Sugarfree is Red Bull Energy Drink
             without sugar."
           />
           <Card
-            img={athelete1}
+            img={athelete3}
             title="Brooklyn Simmons"
             des="Wings without sugar: Red Bull Sugarfree is Red Bull Energy Drink
             without sugar."

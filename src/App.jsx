@@ -1,10 +1,10 @@
-import { useState } from 'react'
-
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
 import Athletes from './components/Athletes'
+import Events from './components/Events'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -22,6 +22,12 @@ function App() {
         </div>
         <div>
           <Athletes/>
+        </div>
+        <div>
+          <Events/>
+        </div>
+        <div>
+          <Footer/>
         </div>
     </div>
   )

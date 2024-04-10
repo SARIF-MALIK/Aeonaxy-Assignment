@@ -11,6 +11,7 @@ export default {
         'bullpng-img': "url('/src/assets/redbull.png')",
         'oxbg' : "url('/src/assets/ox.png')",
         'power' : "url('/src/assets/power.png')",
+        'energy' : "url('/src/assets/energy.png')",
       }
     },
   },

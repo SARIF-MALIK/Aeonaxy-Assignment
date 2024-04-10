@@ -112,7 +112,7 @@ function About() {
       </div>
 
       <div className="power bg-[#0F0B19]">
-        <div className="w-[90%] m-auto overflow-hidden pt-36 bg-power bg-no-repeat pb-10">
+        <div className="w-[95%] m-auto overflow-hidden pt-36 bg-power bg-no-repeat pb-10">
           <div className="relative rounded-lg overflow-hidden">
             <img src={rec31} alt="" />
             <img
