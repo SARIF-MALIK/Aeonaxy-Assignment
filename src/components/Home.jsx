@@ -5,7 +5,7 @@ import bullpng from "../assets/redbull.png";
 function Home() {
   return (
     <div>
-      <div className="h-screen w-screen flex flex-col ">
+      <div className="h-screen w-full flex flex-col ">
         <div className="bg-[#0F0B19] h-full w-full flex relative justify-end">
           <div className="max-h-[524px] max-w-[564px] flex flex-col justify-center items-center p-5 absolute top-5 left-5 bg-gradient-to-r from-[#0F0B19] to-transparent">
             <img src={bullpng} className="mt-10 object-cover"></img>
